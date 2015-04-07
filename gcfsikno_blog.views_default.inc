@@ -209,6 +209,17 @@ function gcfsikno_blog_views_default_views() {
     'image_style' => 'blog',
     'image_link' => '',
   );
+  /* Field: Content: Featured Media */
+  $handler->display->display_options['fields']['field_featured_media']['id'] = 'field_featured_media';
+  $handler->display->display_options['fields']['field_featured_media']['table'] = 'field_data_field_featured_media';
+  $handler->display->display_options['fields']['field_featured_media']['field'] = 'field_featured_media';
+  $handler->display->display_options['fields']['field_featured_media']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_media']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_featured_media']['settings'] = array(
+    'file_view_mode' => 'default',
+  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -245,6 +256,16 @@ function gcfsikno_blog_views_default_views() {
   $handler->display->display_options['fields']['field_categories']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_categories']['type'] = 'taxonomy_term_reference_plain';
   $handler->display->display_options['fields']['field_categories']['delta_offset'] = '0';
+  /* Field: Content: Body */
+  $handler->display->display_options['fields']['body']['id'] = 'body';
+  $handler->display->display_options['fields']['body']['table'] = 'field_data_body';
+  $handler->display->display_options['fields']['body']['field'] = 'body';
+  $handler->display->display_options['fields']['body']['label'] = '';
+  $handler->display->display_options['fields']['body']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['body']['type'] = 'text_summary_or_trimmed';
+  $handler->display->display_options['fields']['body']['settings'] = array(
+    'trim_length' => '300',
+  );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['filter_groups']['groups'] = array(
     1 => 'AND',
@@ -333,6 +354,17 @@ function gcfsikno_blog_views_default_views() {
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'blog',
     'image_link' => '',
+  );
+  /* Field: Content: Featured Media */
+  $handler->display->display_options['fields']['field_featured_media']['id'] = 'field_featured_media';
+  $handler->display->display_options['fields']['field_featured_media']['table'] = 'field_data_field_featured_media';
+  $handler->display->display_options['fields']['field_featured_media']['field'] = 'field_featured_media';
+  $handler->display->display_options['fields']['field_featured_media']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_media']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_featured_media']['settings'] = array(
+    'file_view_mode' => 'default',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
@@ -449,6 +481,17 @@ function gcfsikno_blog_views_default_views() {
   $handler->display->display_options['fields']['field_image']['settings'] = array(
     'image_style' => 'blog',
     'image_link' => 'content',
+  );
+  /* Field: Content: Featured Media */
+  $handler->display->display_options['fields']['field_featured_media']['id'] = 'field_featured_media';
+  $handler->display->display_options['fields']['field_featured_media']['table'] = 'field_data_field_featured_media';
+  $handler->display->display_options['fields']['field_featured_media']['field'] = 'field_featured_media';
+  $handler->display->display_options['fields']['field_featured_media']['label'] = '';
+  $handler->display->display_options['fields']['field_featured_media']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_featured_media']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_featured_media']['type'] = 'file_rendered';
+  $handler->display->display_options['fields']['field_featured_media']['settings'] = array(
+    'file_view_mode' => 'default',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';

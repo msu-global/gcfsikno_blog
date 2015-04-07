@@ -276,10 +276,10 @@ function gcfsikno_blog_default_page_manager_handlers() {
   $display->content = array();
   $display->panels = array();
     $pane = new stdClass();
-    $pane->pid = 'new-60210ef0-a9fe-480a-9870-5fe460074340';
+    $pane->pid = 'new-7915113c-ce7d-4ef9-9648-471a3151e3e3';
     $pane->panel = 'left';
     $pane->type = 'entity_form_field';
-    $pane->subtype = 'node:field_image';
+    $pane->subtype = 'node:field_featured_media';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
@@ -298,9 +298,43 @@ function gcfsikno_blog_default_page_manager_handlers() {
     $pane->extras = array();
     $pane->position = 0;
     $pane->locks = array();
-    $pane->uuid = '60210ef0-a9fe-480a-9870-5fe460074340';
-    $display->content['new-60210ef0-a9fe-480a-9870-5fe460074340'] = $pane;
-    $display->panels['left'][0] = 'new-60210ef0-a9fe-480a-9870-5fe460074340';
+    $pane->uuid = '7915113c-ce7d-4ef9-9648-471a3151e3e3';
+    $display->content['new-7915113c-ce7d-4ef9-9648-471a3151e3e3'] = $pane;
+    $display->panels['left'][0] = 'new-7915113c-ce7d-4ef9-9648-471a3151e3e3';
+    $pane = new stdClass();
+    $pane->pid = 'new-f56c0a64-ac22-4637-a712-e9f1c541af17';
+    $pane->panel = 'left';
+    $pane->type = 'entity_form_field';
+    $pane->subtype = 'node:field_image';
+    $pane->shown = TRUE;
+    $pane->access = array(
+      'plugins' => array(
+        0 => array(
+          'name' => NULL,
+          'settings' => NULL,
+          'not' => FALSE,
+        ),
+      ),
+    );
+    $pane->configuration = array(
+      'label' => '',
+      'formatter' => '',
+      'context' => 'argument_node_edit_1',
+      'override_title' => 0,
+      'override_title_text' => '',
+      'override_title_heading' => 'h2',
+    );
+    $pane->cache = array();
+    $pane->style = array(
+      'settings' => NULL,
+    );
+    $pane->css = array();
+    $pane->extras = array();
+    $pane->position = 1;
+    $pane->locks = array();
+    $pane->uuid = 'f56c0a64-ac22-4637-a712-e9f1c541af17';
+    $display->content['new-f56c0a64-ac22-4637-a712-e9f1c541af17'] = $pane;
+    $display->panels['left'][1] = 'new-f56c0a64-ac22-4637-a712-e9f1c541af17';
     $pane = new stdClass();
     $pane->pid = 'new-a3f8d180-2e7f-4b32-bcf9-180539cac250';
     $pane->panel = 'main';
@@ -310,7 +344,7 @@ function gcfsikno_blog_default_page_manager_handlers() {
     $pane->access = array();
     $pane->configuration = array(
       'context' => 'argument_node_edit_1',
-      'override_title' => 0,
+      'override_title' => 1,
       'override_title_text' => '',
       'override_title_heading' => 'h2',
     );
