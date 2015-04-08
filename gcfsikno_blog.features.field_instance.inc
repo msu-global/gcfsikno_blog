@@ -251,6 +251,79 @@ function gcfsikno_blog_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-blog-field_featured_media'
+  $field_instances['node-blog-field_featured_media'] = array(
+    'bundle' => 'blog',
+    'deleted' => 0,
+    'description' => 'Do you have something to attach to a blog post, such as an image, a YouTube video, or an audio file?  Upload it here, or select an image from the media browser.',
+    'display' => array(
+      'default' => array(
+        'label' => 'hidden',
+        'module' => 'file_entity',
+        'settings' => array(
+          'file_view_mode' => 'default',
+        ),
+        'type' => 'file_rendered',
+        'weight' => 1,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_featured_media',
+    'label' => 'Featured Media',
+    'required' => 0,
+    'settings' => array(
+      'description_field' => 0,
+      'file_directory' => '',
+      'file_extensions' => 'txt jpg jpeg mp3 mp4 aac gif png',
+      'filefield_paths' => array(
+        'active_updating' => 0,
+        'file_name' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:ffp-name-only-original].[file:ffp-extension-original]',
+        ),
+        'file_path' => array(
+          'options' => array(
+            'pathauto' => 0,
+            'transliterate' => 0,
+          ),
+          'value' => '[file:type:machine-name]/[current-date:logical_year]',
+        ),
+        'retroactive_update' => 0,
+      ),
+      'filefield_paths_enabled' => 1,
+      'max_filesize' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'media',
+      'settings' => array(
+        'allowed_schemes' => array(
+          'oembed' => 'oembed',
+          'private' => 0,
+          'public' => 'public',
+        ),
+        'allowed_types' => array(
+          'audio' => 'audio',
+          'document' => 'document',
+          'image' => 'image',
+          'video' => 'video',
+        ),
+        'browser_plugins' => array(
+          'media_default--media_browser_1' => 'media_default--media_browser_1',
+          'media_default--media_browser_my_files' => 'media_default--media_browser_my_files',
+          'media_internet' => 'media_internet',
+          'upload' => 'upload',
+        ),
+      ),
+      'type' => 'media_generic',
+      'weight' => 2,
+    ),
+  );
+
   // Exported field_instance: 'node-blog-field_image'
   $field_instances['node-blog-field_image'] = array(
     'bundle' => 'blog',
@@ -386,8 +459,10 @@ function gcfsikno_blog_field_default_field_instances() {
   t('Body');
   t('Categories');
   t('Comment');
+  t('Do you have something to attach to a blog post, such as an image, a YouTube video, or an audio file?  Upload it here, or select an image from the media browser.');
   t('Document Author');
   t('Feature this');
+  t('Featured Media');
   t('Image');
   t('Start typing the topic and wait to see if appears as an option. If it does, select it. If it does not, finish typing to add it to the list for others to use.');
   t('This can be an image hosted from the Knowledge Platform, a remote image, or a media type such as a YouTube video.');
