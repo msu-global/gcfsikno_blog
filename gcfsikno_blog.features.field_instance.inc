@@ -151,55 +151,6 @@ function gcfsikno_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_document_author'
-  $field_instances['node-blog-field_document_author'] = array(
-    'bundle' => 'blog',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
-      ),
-      'full' => array(
-        'label' => 'hidden',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 3,
-      ),
-      'teaser' => array(
-        'label' => 'inline',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 4,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_document_author',
-    'label' => 'Document Author',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'autocomplete_path' => 'taxonomy/autocomplete',
-        'mode' => 'single',
-        'size' => 60,
-      ),
-      'type' => 'options_select',
-      'weight' => 9,
-    ),
-  );
-
   // Exported field_instance: 'node-blog-field_feature_this'
   $field_instances['node-blog-field_feature_this'] = array(
     'bundle' => 'blog',
@@ -460,7 +411,6 @@ function gcfsikno_blog_field_default_field_instances() {
   t('Categories');
   t('Comment');
   t('Do you have something to attach to a blog post, such as an image, a YouTube video, or an audio file?  Upload it here, or select an image from the media browser.');
-  t('Document Author');
   t('Feature this');
   t('Featured Media');
   t('Image');
