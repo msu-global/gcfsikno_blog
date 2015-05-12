@@ -4,6 +4,7 @@ core = 7.x
 package = GCFSI Knowledge Platform
 version = 7.x-1.0
 project = gcfsikno_blog
+
 dependencies[] = features
 dependencies[] = filefield_paths
 dependencies[] = list
@@ -13,6 +14,9 @@ dependencies[] = page_manager
 dependencies[] = taxonomy
 dependencies[] = uuid_features
 dependencies[] = views_content
+
+files[] = migrate/BlogImageReferenceMigration.inc
+
 features[ckeditor_profile][] = Advanced
 features[ckeditor_profile][] = Full
 features[ckeditor_profile][] = Simple
