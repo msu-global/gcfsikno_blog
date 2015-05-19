@@ -22,13 +22,8 @@ class BlogImageReferenceMigration extends Migration {
       MigrateDestinationTable::getKeySchema('field_data_field_featured_media')
     );
 
-    $this->addFieldMapping('entity_type', 'entity_type');
-    $this->addFieldMapping('bundle', 'bundle');
-    $this->addFieldMapping('entity_id', 'entity_id');
-    $this->addFieldMapping('revision_id', 'revision_id');
+    $this->addSimpleMappings(array('entity_type', 'bundle', 'entity_id', 'revision_id', 'delta', 'language'));
     $this->addFieldMapping('field_featured_media_fid', 'field_image_fid');
-    $this->addFieldMapping('delta', 'delta');
-    $this->addFieldMapping('language', 'language');
     $this->addFieldMapping('field_featured_media_display')->defaultValue(1);
   }
 }
