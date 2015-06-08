@@ -41,7 +41,7 @@ function gcfsikno_blog_views_default_views() {
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';
   $handler->display->display_options['relationships']['uid']['table'] = 'node';
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
-  /* Field: Field: Image */
+  /* Field: Broken/missing handler */
   $handler->display->display_options['fields']['field_image']['id'] = 'field_image';
   $handler->display->display_options['fields']['field_image']['table'] = 'field_data_field_image';
   $handler->display->display_options['fields']['field_image']['field'] = 'field_image';
@@ -51,11 +51,6 @@ function gcfsikno_blog_views_default_views() {
   $handler->display->display_options['fields']['field_image']['element_wrapper_type'] = 'div';
   $handler->display->display_options['fields']['field_image']['element_wrapper_class'] = 'blog-image';
   $handler->display->display_options['fields']['field_image']['element_default_classes'] = FALSE;
-  $handler->display->display_options['fields']['field_image']['click_sort_column'] = 'fid';
-  $handler->display->display_options['fields']['field_image']['settings'] = array(
-    'image_style' => 'blog',
-    'image_link' => 'content',
-  );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -333,10 +328,6 @@ function gcfsikno_blog_views_default_views() {
     'trim_length' => '300',
   );
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
-  $handler->display->display_options['filter_groups']['groups'] = array(
-    1 => 'AND',
-    2 => 'OR',
-  );
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filter criterion: Content: Published */
   $handler->display->display_options['filters']['status']['id'] = 'status';
@@ -353,11 +344,32 @@ function gcfsikno_blog_views_default_views() {
     'blog' => 'blog',
   );
   $handler->display->display_options['filters']['type']['group'] = 1;
+  /* Filter criterion: User: Name */
+  $handler->display->display_options['filters']['field_name']['id'] = 'field_name';
+  $handler->display->display_options['filters']['field_name']['table'] = 'field_data_field_name';
+  $handler->display->display_options['filters']['field_name']['field'] = 'field_name';
+  $handler->display->display_options['filters']['field_name']['relationship'] = 'uid';
+  $handler->display->display_options['filters']['field_name']['group'] = 1;
+  $handler->display->display_options['filters']['field_name']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['field_name']['expose']['operator_id'] = 'field_name_op';
+  $handler->display->display_options['filters']['field_name']['expose']['label'] = 'Author';
+  $handler->display->display_options['filters']['field_name']['expose']['operator'] = 'field_name_op';
+  $handler->display->display_options['filters']['field_name']['expose']['identifier'] = 'field_name';
+  $handler->display->display_options['filters']['field_name']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    8 => 0,
+    5 => 0,
+    7 => 0,
+    4 => 0,
+    6 => 0,
+    3 => 0,
+  );
   /* Filter criterion: Content: Has taxonomy term */
   $handler->display->display_options['filters']['tid']['id'] = 'tid';
   $handler->display->display_options['filters']['tid']['table'] = 'taxonomy_index';
   $handler->display->display_options['filters']['tid']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid']['group'] = 2;
+  $handler->display->display_options['filters']['tid']['group'] = 1;
   $handler->display->display_options['filters']['tid']['exposed'] = TRUE;
   $handler->display->display_options['filters']['tid']['expose']['operator_id'] = 'tid_op';
   $handler->display->display_options['filters']['tid']['expose']['label'] = 'Category';
@@ -367,44 +379,21 @@ function gcfsikno_blog_views_default_views() {
   $handler->display->display_options['filters']['tid']['expose']['remember_roles'] = array(
     2 => '2',
     1 => 0,
-    6 => 0,
-    7 => 0,
-    4 => 0,
     8 => 0,
     5 => 0,
+    7 => 0,
+    4 => 0,
+    6 => 0,
     3 => 0,
   );
   $handler->display->display_options['filters']['tid']['reduce_duplicates'] = TRUE;
   $handler->display->display_options['filters']['tid']['type'] = 'select';
   $handler->display->display_options['filters']['tid']['vocabulary'] = 'categories';
-  /* Filter criterion: Content: Has taxonomy term */
-  $handler->display->display_options['filters']['tid_1']['id'] = 'tid_1';
-  $handler->display->display_options['filters']['tid_1']['table'] = 'taxonomy_index';
-  $handler->display->display_options['filters']['tid_1']['field'] = 'tid';
-  $handler->display->display_options['filters']['tid_1']['group'] = 2;
-  $handler->display->display_options['filters']['tid_1']['exposed'] = TRUE;
-  $handler->display->display_options['filters']['tid_1']['expose']['operator_id'] = 'tid_1_op';
-  $handler->display->display_options['filters']['tid_1']['expose']['label'] = 'Topic';
-  $handler->display->display_options['filters']['tid_1']['expose']['description'] = 'Show only articles pertaining to a topic you\'re interested in.';
-  $handler->display->display_options['filters']['tid_1']['expose']['operator'] = 'tid_1_op';
-  $handler->display->display_options['filters']['tid_1']['expose']['identifier'] = 'tid_1';
-  $handler->display->display_options['filters']['tid_1']['expose']['remember_roles'] = array(
-    2 => '2',
-    1 => 0,
-    6 => 0,
-    7 => 0,
-    4 => 0,
-    8 => 0,
-    5 => 0,
-    3 => 0,
-  );
-  $handler->display->display_options['filters']['tid_1']['reduce_duplicates'] = TRUE;
-  $handler->display->display_options['filters']['tid_1']['type'] = 'select';
-  $handler->display->display_options['filters']['tid_1']['vocabulary'] = 'topics';
   $handler->display->display_options['inherit_panels_path'] = '1';
 
   /* Display: Home Page */
   $handler = $view->new_display('panel_pane', 'Home Page', 'panel_pane_2');
+  $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '6';

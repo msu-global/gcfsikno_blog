@@ -151,57 +151,6 @@ function gcfsikno_blog_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-blog-field_feature_this'
-  $field_instances['node-blog-field_feature_this'] = array(
-    'bundle' => 'blog',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'inline',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 4,
-      ),
-      'full' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 5,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_feature_this',
-    'label' => 'Feature this',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 0,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 6,
-    ),
-  );
-
   // Exported field_instance: 'node-blog-field_featured_media'
   $field_instances['node-blog-field_featured_media'] = array(
     'bundle' => 'blog',
@@ -281,7 +230,6 @@ function gcfsikno_blog_field_default_field_instances() {
   t('Categories');
   t('Comment');
   t('Do you have something to attach to a blog post, such as an image, a YouTube video, or an audio file?  Upload it here, or select an image from the media browser.');
-  t('Feature this');
   t('Featured Media');
 
   return $field_instances;

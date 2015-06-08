@@ -38,16 +38,6 @@ function gcfsikno_blog_filter_default_formats() {
     'status' => 1,
     'weight' => -10,
     'filters' => array(
-      'biblio_filter_inline_reference' => array(
-        'weight' => 0,
-        'status' => 1,
-        'settings' => array(),
-      ),
-      'biblio_filter_reference' => array(
-        'weight' => 0,
-        'status' => 1,
-        'settings' => array(),
-      ),
       'filter_url' => array(
         'weight' => 0,
         'status' => 1,
