@@ -83,8 +83,8 @@ function gcfsikno_blog_ckeditor_profile_defaults() {
       'name' => 'CKEditor Global Profile',
       'settings' => array(
         'skin' => 'moono',
-        'ckeditor_path' => '%m/ckeditor/ckeditor',
-        'ckeditor_local_path' => 'sites/all/libraries/ckeditor',
+        'ckeditor_path' => '%b/%l/ckeditor',
+        'ckeditor_local_path' => '',
         'ckeditor_plugins_path' => '%m/plugins',
         'ckeditor_plugins_local_path' => '',
         'ckfinder_path' => '%m/ckfinder',
