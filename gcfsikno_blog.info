@@ -16,6 +16,7 @@ dependencies[] = taxonomy
 dependencies[] = uuid_features
 dependencies[] = views_content
 features[ckeditor_profile][] = Advanced
+features[ckeditor_profile][] = CKEditor Global Profile
 features[ckeditor_profile][] = Full
 features[ckeditor_profile][] = Simple
 features[ctools][] = page_manager:pages_default:1

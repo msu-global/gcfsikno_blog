@@ -79,6 +79,22 @@ function gcfsikno_blog_ckeditor_profile_defaults() {
         'filtered_html' => 'Filtered HTML',
       ),
     ),
+    'CKEditor Global Profile' => array(
+      'name' => 'CKEditor Global Profile',
+      'settings' => array(
+        'skin' => 'moono',
+        'ckeditor_path' => '%m/ckeditor/ckeditor',
+        'ckeditor_local_path' => 'sites/all/libraries/ckeditor',
+        'ckeditor_plugins_path' => '%m/plugins',
+        'ckeditor_plugins_local_path' => '',
+        'ckfinder_path' => '%m/ckfinder',
+        'ckfinder_local_path' => '',
+        'ckeditor_aggregate' => 'f',
+        'toolbar_wizard' => 't',
+        'loadPlugins' => array(),
+      ),
+      'input_formats' => array(),
+    ),
     'Full' => array(
       'name' => 'Full',
       'settings' => array(
