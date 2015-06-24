@@ -59,5 +59,19 @@ function gcfsikno_blog_user_default_permissions() {
     'module' => 'taxonomy',
   );
 
+  // Exported permission: 'use text format blog_comment'.
+  $permissions['use text format blog_comment'] = array(
+    'name' => 'use text format blog_comment',
+    'roles' => array(),
+    'module' => 'filter',
+  );
+
+  // Exported permission: 'use text format filtered_html'.
+  $permissions['use text format filtered_html'] = array(
+    'name' => 'use text format filtered_html',
+    'roles' => array(),
+    'module' => 'filter',
+  );
+
   return $permissions;
 }
