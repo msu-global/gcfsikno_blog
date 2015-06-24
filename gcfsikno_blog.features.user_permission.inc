@@ -10,6 +10,20 @@
 function gcfsikno_blog_user_default_permissions() {
   $permissions = array();
 
+  // Exported permission: 'access comments'.
+  $permissions['access comments'] = array(
+    'name' => 'access comments',
+    'roles' => array(),
+    'module' => 'comment',
+  );
+
+  // Exported permission: 'administer comments'.
+  $permissions['administer comments'] = array(
+    'name' => 'administer comments',
+    'roles' => array(),
+    'module' => 'comment',
+  );
+
   // Exported permission: 'create blog content'.
   $permissions['create blog content'] = array(
     'name' => 'create blog content',
@@ -52,11 +66,32 @@ function gcfsikno_blog_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'edit own comments'.
+  $permissions['edit own comments'] = array(
+    'name' => 'edit own comments',
+    'roles' => array(),
+    'module' => 'comment',
+  );
+
   // Exported permission: 'edit terms in categories'.
   $permissions['edit terms in categories'] = array(
     'name' => 'edit terms in categories',
     'roles' => array(),
     'module' => 'taxonomy',
+  );
+
+  // Exported permission: 'post comments'.
+  $permissions['post comments'] = array(
+    'name' => 'post comments',
+    'roles' => array(),
+    'module' => 'comment',
+  );
+
+  // Exported permission: 'skip comment approval'.
+  $permissions['skip comment approval'] = array(
+    'name' => 'skip comment approval',
+    'roles' => array(),
+    'module' => 'comment',
   );
 
   // Exported permission: 'use text format blog_comment'.
