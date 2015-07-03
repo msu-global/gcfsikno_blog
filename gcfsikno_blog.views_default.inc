@@ -408,7 +408,7 @@ function gcfsikno_blog_views_default_views() {
   $handler->display->display_options['fields']['field_featured_media']['click_sort_column'] = 'fid';
   $handler->display->display_options['fields']['field_featured_media']['type'] = 'file_rendered';
   $handler->display->display_options['fields']['field_featured_media']['settings'] = array(
-    'file_view_mode' => 'default',
+    'file_view_mode' => 'teaser',
   );
   /* Field: Content: Title */
   $handler->display->display_options['fields']['title']['id'] = 'title';
